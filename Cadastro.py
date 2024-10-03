@@ -25,7 +25,7 @@ nome = st.text_input("Digite o nome do cliente",
 dt_nasc = st.date_input("Data nascimento", format="DD/MM/YYYY")
 
 tipo =st.selectbox("Tipo do cliente",
-                   ["Pessoa jurídica", "Pessoa física"])
+                   [" ", "Pessoa jurídica", "Pessoa física"])
 
 btn_cadastrar = st.button("Cadastrar", 
                           on_click=gravar_dados,
