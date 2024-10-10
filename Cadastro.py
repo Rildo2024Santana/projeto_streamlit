@@ -4,7 +4,7 @@ from datetime import date
 
 def gravar_dados(nome,dt_cadas,tipo,endereco,numero,ponto,tel,celular):
     if nome and dt_cadas <= date.today():
-        with open("clientes.csv", "a", encoding="utf-10") as file:
+        with open("clientes.csv", "a", encoding="utf-8") as file:
             file.write(f"{nome},{dt_cadas},{tipo}\n,{endereco},{numero},{ponto},{tel},{celular}")
         st.session_state["sucesso"] = True
     else:
