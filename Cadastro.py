@@ -32,14 +32,14 @@ tel = st.text_input("Telefone Contato")
 
 celular = st.text_input("Celular")
 
-dt_nasc = st.date_input("Data Cadastro", format="DD/MM/YYYY")
+dt_nasc = st.date_input("Dat. do Cadastro", format="DD/MM/YYYY")
 
 tipo =st.selectbox("Tipo do cliente",
                    [" ", "Pessoa jurídica", "Pessoa física"])
 
 btn_cadastrar = st.button("Cadastrar", 
                           on_click=gravar_dados,
-                          args=[nome, dt_nasc, tipo])
+                          args=[nome, dt_nasc, tipo, endereco, numero, PontoRef, tel, celular,])
 
 
 if btn_cadastrar:
