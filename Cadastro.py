@@ -22,11 +22,6 @@ st.divider()
 nome = st.text_input("Nome do Cliente",
                       key="nome_cliente")
 
-dt_cadas = st.date_input("Dat. do Cadastro", format="DD/MM/YYYY")
-
-tipo =st.selectbox("Tipo do cliente",
-                   [" ", "Pessoa jurídica", "Pessoa física"])
-
 endereco = st.text_input("Endereço")
                  
 numero = st.text_input("Número da Casa")
@@ -36,6 +31,12 @@ ponto_ref = st.text_input("Ponto de Referência")
 tel = st.text_input("Telefone Contato")
 
 celular = st.text_input("Celular")
+
+dt_cadas = st.date_input("Dat. do Cadastro", format="DD/MM/YYYY")
+
+tipo =st.selectbox("Tipo do cliente",
+                   [" ", "Pessoa jurídica", "Pessoa física"])
+
 
 btn_cadastrar = st.button("Cadastrar", 
                           on_click=gravar_dados,
