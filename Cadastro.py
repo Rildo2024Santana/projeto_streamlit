@@ -23,7 +23,7 @@ nome = st.text_input("Nome do Cliente",
                       key="nome_cliente")
 
 endereco = st.text_input("Endereço",
-                          key="endereco_cliente")
+                          key="endereco")
                  
 numero = st.text_input("Número",
                       key="numero")
@@ -31,11 +31,10 @@ numero = st.text_input("Número",
 ponto_ref = st.text_input("Ponto de Referência",
                          key="ponto_ref")
 
-tel = st.text_input("Telefone Contato",
-                   key="telefone_contato")
+tel = st.text_input("Telefone Contato", format="00-0000-0000")
+                  
 
-celular = st.text_input("Celular",
-                       key="celular")
+celular = st.text_input("Celular", format="00-0000-0000")
 
 dt_cadas = st.date_input("Dat. do Cadastro", format="DD/MM/YYYY")
 
