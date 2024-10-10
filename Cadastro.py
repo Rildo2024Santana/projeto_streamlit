@@ -5,7 +5,7 @@ from datetime import date
 def gravar_dados(nome, data_nasc, tipo):
     if nome and data_nasc <= date.today():
         with open("clientes.csv", "a", encoding="utf-8") as file:
-            file.write(f"{nome},{data_nasc},{tipo}\n")
+            file.write(f"{nome},{data_nasc},{tipo}\n, {endereco},{numero},{ponto},{Tel},{celular}")
         st.session_state["sucesso"] = True
     else:
         st.session_state["sucesso"] = False   
@@ -19,10 +19,20 @@ st.set_page_config(
 st.title("Cadastro de clientes")
 st.divider()
 
-nome = st.text_input("Digite o nome do cliente",
+nome = st.text_input("Nome do Cliente",
                       key="nome_cliente")
 
-dt_nasc = st.date_input("Data nascimento", format="DD/MM/YYYY")
+endereco = st.text_input("Endereço")
+                 
+numero = st.text_input("Número da Casa")
+
+PontoRef = st.text_input("Ponto de Referência")
+
+tel = st.text_input("Telefone Contato")
+
+celular = st.text_input("Celular")
+
+dt_nasc = st.date_input("Data Cadastro", format="DD/MM/YYYY")
 
 tipo =st.selectbox("Tipo do cliente",
                    [" ", "Pessoa jurídica", "Pessoa física"])
