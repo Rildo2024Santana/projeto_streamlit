@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 
-def gravar_dados(nome, endereco,numero,ponto,tel,celular,data_nasc, tipo,):
+def gravar_dados(nome,data_nasc, tipo,endereco,numero,ponto,tel,celular):
     if nome and data_nasc <= date.today():
         with open("clientes.csv", "a", encoding="utf-8") as file:
-            file.write(f"{nome},{data_nasc},{tipo}\n, {endereco},{numero},{ponto},{Tel},{celular}")
+            file.write(f"{nome},{data_nasc},{tipo}\n,{endereco},{numero},{ponto},{Tel},{celular}")
         st.session_state["sucesso"] = True
     else:
         st.session_state["sucesso"] = False   
@@ -22,6 +22,11 @@ st.divider()
 nome = st.text_input("Nome do Cliente",
                       key="nome_cliente")
 
+dt_nasc = st.date_input("Dat. do Cadastro", format="DD/MM/YYYY")
+
+tipo =st.selectbox("Tipo do cliente",
+                   [" ", "Pessoa jurídica", "Pessoa física"])
+
 endereco = st.text_input("Endereço")
                  
 numero = st.text_input("Número da Casa")
@@ -31,11 +36,6 @@ ponto_ref = st.text_input("Ponto de Referência")
 tel = st.text_input("Telefone Contato")
 
 celular = st.text_input("Celular")
-
-dt_nasc = st.date_input("Dat. do Cadastro", format="DD/MM/YYYY")
-
-tipo =st.selectbox("Tipo do cliente",
-                   [" ", "Pessoa jurídica", "Pessoa física"])
 
 btn_cadastrar = st.button("Cadastrar", 
                           on_click=gravar_dados,
