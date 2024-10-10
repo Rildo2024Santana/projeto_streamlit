@@ -22,15 +22,20 @@ st.divider()
 nome = st.text_input("Nome do Cliente",
                       key="nome_cliente")
 
-endereco = st.text_input("Endereço")
+endereco = st.text_input("Endereço",
+                          key="endereco")
                  
-numero = st.text_input("Número da Casa")
+numero = st.text_input("Número",
+                      key="numero")
 
-ponto_ref = st.text_input("Ponto de Referência")
+ponto_ref = st.text_input("Ponto de Referência",
+                         key="ponto_referencia")
 
-tel = st.text_input("Telefone Contato")
+tel = st.text_input("Telefone Contato",
+                   key="telefone_contato")
 
-celular = st.text_input("Celular")
+celular = st.text_input("Celular",
+                       key="celular")
 
 dt_cadas = st.date_input("Dat. do Cadastro", format="DD/MM/YYYY")
 
