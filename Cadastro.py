@@ -26,7 +26,7 @@ endereco = st.text_input("Endereço")
                  
 numero = st.text_input("Número da Casa")
 
-PontoRef = st.text_input("Ponto de Referência")
+ponto_ref = st.text_input("Ponto de Referência")
 
 tel = st.text_input("Telefone Contato")
 
@@ -39,7 +39,7 @@ tipo =st.selectbox("Tipo do cliente",
 
 btn_cadastrar = st.button("Cadastrar", 
                           on_click=gravar_dados,
-                          args=[nome, dt_nasc, tipo, endereco, numero, PontoRef, tel, celular,])
+                          args=[nome, dt_nasc, tipo, endereco, numero, ponto_ref, tel, celular,])
 
 
 if btn_cadastrar:
