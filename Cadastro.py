@@ -22,15 +22,15 @@ st.title("Cadastro de Cliente")
 st.divider()
 
 
-nome = st.text_input("Nome do Cliente:",
+nome = st.text_input("Nome do Cliente",
                      key="nome_cliente")
 
-endereco = st.text_input("Endereço:",
+endereco = st.text_input("Endereço",
                          key="endereco")
 
 dt_cadas = st.date_input ("Dta do Cadastro:", format="DD/MM/YYYY")
 
-tipo = st.selectbox("Tipo do Cliente:",
+tipo = st.selectbox("Tipo do Cliente",
                     [" ", "Pessoa jurídica", "Pessoa física"])
 
 btn_cadastrar = st.buttom("Cadastrar", 
