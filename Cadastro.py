@@ -28,7 +28,7 @@ nome = st.text_input("Nome do Cliente",
 endereco = st.text_input("Endereço",
                          key="endereco")
 
-dt_cadas = st.date_input ("Dta do Cadastro:", format="DD/MM/YYYY")
+dt_cadas = st.date_input ("Dta do Cadastro", format="DD/MM/YYYY")
 
 tipo = st.selectbox("Tipo do Cliente",
                     [" ", "Pessoa jurídica", "Pessoa física"])
@@ -43,6 +43,4 @@ if btn_cadastrar:
                    icon="✅")
     else:
         st.error("Houve algum problema no cadastro!",
-                 icon="❌") 
-    
- 
+                 icon="❌")   
