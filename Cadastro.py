@@ -17,7 +17,7 @@ st.set_page_config(
 st.title("Cadastro de clientes")
 st.divider()
 
-nome = st.text_input("Digite o nome do cliente",
+nome = st.text_input("Nome do cliente",
                       key="nome_cliente")
 
 endereco = st.text_input("Endereço",
