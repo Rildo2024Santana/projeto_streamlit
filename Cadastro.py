@@ -13,12 +13,12 @@ def grava_dados(nome, endereco,data_cadas, tipo):
 
 
 st.st_page_config(
-    page_title="Cadastro de Cliente",
+    page_title="Cadastro de Clientes",
     page_icon="📕"
 )
 
 
-st.title("Cadastro de Cliente")
+st.title("Cadastro de Clientes")
 st.divider()
 
 
