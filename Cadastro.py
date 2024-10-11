@@ -11,16 +11,13 @@ def grava_dados(nome, endereco,data_cadas, tipo):
     else:
         st.session_state["sucesso"] = False
 
-
 st.st_page_config(
     page_title="Cadastro de Clientes",
     page_icon="📕"
 )
 
-
 st.title("Cadastro de Clientes")
 st.divider()
-
 
 nome = st.text_input("Nome do Cliente",
                      key="nome_cliente")
