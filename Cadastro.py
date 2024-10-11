@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import date
 
 def gravar_dados(nome,endereco,dt_cadas,tipo):
-    if nome and data_cadas <= date.today():
+    if nome and dt_cadas <= date.today():
         st.session_state["sucesso"] = True
     else:
         st.session_state["sucesso"] = False   
