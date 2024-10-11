@@ -43,4 +43,4 @@ if btn_cadastrar:
                    icon="✅")
     else:
         st.error("Houve algum problema no cadastro!",
-                 icon="❌")   
+                 icon="❌")    
