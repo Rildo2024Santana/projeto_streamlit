@@ -24,7 +24,6 @@ nome = st.text_input("Nome do cliente",
 
 endereco = st.text_input("Endereço")
                      
-
 dt_cadas = st.date_input("Data Cadastro", format="DD/MM/YYYY")
 
 tipo =st.selectbox("Tipo do cliente",
@@ -32,7 +31,7 @@ tipo =st.selectbox("Tipo do cliente",
 
 btn_cadastrar = st.button("Cadastrar", 
                           on_click=gravar_dados,
-                          args=[nome, dt_cadas, tipo])
+                          args=[nome, endereco,dt_cadas, tipo])
 
 
 if btn_cadastrar:
