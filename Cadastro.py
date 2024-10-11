@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 
-def gravar_dados(nome,data_nasc,tipo):
-    if nome and data_nasc <= date.today():
+def gravar_dados(nome,endereco,dt_cadas,tipo):
+    if nome and data_cadas <= date.today():
         st.session_state["sucesso"] = True
     else:
         st.session_state["sucesso"] = False   
@@ -20,14 +20,17 @@ st.divider()
 nome = st.text_input("Digite o nome do cliente",
                       key="nome_cliente")
 
-dt_nasc = st.date_input("Data nascimento", format="DD/MM/YYYY")
+endereco = st.text_input("Endereço",
+                         key="endereco")
+
+dt_cadas = st.date_input("Data do Cadastro", format="DD/MM/YYYY")
 
 tipo =st.selectbox("Tipo do cliente",
-                   ["Pessoa jurídica", "Pessoa física"])
+                   [" ","Pessoa jurídica", "Pessoa física"])
 
 btn_cadastrar = st.button("Cadastrar", 
                           on_click=gravar_dados,
-                          args=[nome, dt_nasc, tipo])
+                          args=[nome,endereco,dt_cadas,tipo])
 
 
 if btn_cadastrar:
