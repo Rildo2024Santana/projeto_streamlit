@@ -20,7 +20,7 @@ st.divider()
 nome = st.text_input("Nome do cliente",
                       key="nome_cliente",
                       max_chars=20)
-st.header("st.radio")
+
 sexo = st.radio("Escolha o Sexo",
                  ["Masculino","Femenino","Gênero não-binário","Agênero","Gênero-fluido","Bigênero","Mulher transexual","Homem transexual","Poligênero","Neutro"])
 
