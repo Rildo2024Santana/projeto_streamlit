@@ -21,7 +21,7 @@ nome = st.text_input("Nome do cliente",
                       key="nome_cliente",
                       max_chars=20)
 
-endereco = st.text_input("Endereço",
+end = st.text_input("Endereço",
                          key="input_endereco",
                          max_chars=25)
 
@@ -32,7 +32,7 @@ tipo =st.selectbox("Tipo do cliente",
 
 btn_cadastrar = st.button("Cadastrar", 
                           on_click=gravar_dados,
-                          args=[nome,endereco,dt_cadas,tipo])
+                          args=[nome,end,dt_cadas,tipo])
 
 
 if btn_cadastrar:
