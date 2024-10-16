@@ -18,4 +18,5 @@ if aceito:
     nome = st.text_input("Digite o seu nome:")
     idade = st.number_input("Digite a sua idade:")
     data = st.date_input("Data de contratação", format="DD/MM/YYYY")
+    st.button("Cadastrar")
 
