@@ -12,7 +12,7 @@ Nos termos descritos acima, se você marcar como aceito,
 poderá realizar o seu cadastro.
 
 """)
-aceito = st.sheckbox("Eu aceito os Termos")
+aceito = st.checkbox("Eu aceito os Termos")
 
 if aceito:
     nome = st.text_input("Digite o seu nome:")
