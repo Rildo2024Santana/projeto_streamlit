@@ -22,7 +22,8 @@ nome = st.text_input("Nome do cliente",
                       max_chars=20)
 
 sexo = st.radio("Escolha o Sexo",
-                 ["Masculino","Femenino","Gênero não-binário","Agênero","Gênero-fluido","Bigênero","Mulher transexual","Homem transexual","Poligênero","Neutro"])
+                 ["Masculino","Femenino","Gênero não-binário","Agênero","Gênero-fluido","Bigênero","Mulher transexual","Homem transexual","Poligênero","Neutro"],
+               index=2)
 
 end = st.text_input("Endereço",
                          key="input_end",
