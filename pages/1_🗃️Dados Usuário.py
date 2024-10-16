@@ -5,6 +5,6 @@ st.set_page_config(
     page_title="Dados do Usuário",
     page_icon="♟️")
 
-st.title("Dados do Usuário")
-st.dataframe(st.session_state["dados"])
+## st.title("Dados do Usuário")
+## st.dataframe(st.session_state["dados"])
 
