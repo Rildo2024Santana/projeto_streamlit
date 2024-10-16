@@ -18,10 +18,12 @@ st.title("Cadastro de clientes")
 st.divider()
 
 nome = st.text_input("Nome do cliente",
-                      key="nome_cliente")
+                      key="nome_cliente",
+                      max_chars=20)
 
 endereco = st.text_input("Endereço",
-                         key="endereco")
+                         key="endereco",
+                        max+chars=25)
 
 dt_cadas = st.date_input("Data do Cadastro", format="DD/MM/YYYY")
 
