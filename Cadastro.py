@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 
-def gravar_dados(nome,end,dt_cadas,tipo):
+def gravar_dados(nome,sexo,end,dt_cadas,tipo):
     if nome and dt_cadas <= date.today():
         st.session_state["sucesso"] = True
     else:
@@ -21,9 +21,8 @@ nome = st.text_input("Nome do cliente",
                       key="nome_cliente",
                       max_chars=20)
 st.header("st.radio")
-opcao = st.radio("Escolha o Sexo",
-                 ["","Masculino","Femenino","Mulher cisgênero","Mulher transgênero","Homem cisgênero","Homem transgênero","Gênero não-binário",
-                  "Agênero","Gênero-fluido","Bigênero","Mulher transexual","Homem transexual","Poligênero","Neutro"])
+sexo = st.radio("Escolha o Sexo",
+                 ["Masculino","Femenino","Gênero não-binário","Agênero","Gênero-fluido","Bigênero","Mulher transexual","Homem transexual","Poligênero","Neutro"])
 
 end = st.text_input("Endereço",
                          key="input_end",
@@ -36,7 +35,7 @@ tipo =st.selectbox("Tipo do cliente",
 
 btn_cadastrar = st.button("Cadastrar", 
                           on_click=gravar_dados,
-                          args=[nome,end,dt_cadas,tipo])
+                          args=[nome,sexo,end,dt_cadas,tipo])
 
 
 if btn_cadastrar:
