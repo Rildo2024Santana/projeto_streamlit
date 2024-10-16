@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 
-def gravar_dados(nome,endereco,dt_cadas,tipo):
+def gravar_dados(nome,end,dt_cadas,tipo):
     if nome and dt_cadas <= date.today():
         st.session_state["sucesso"] = True
     else:
@@ -22,7 +22,7 @@ nome = st.text_input("Nome do cliente",
                       max_chars=20)
 
 end = st.text_input("Endereço",
-                         key="input_endereco",
+                         key="input_end",
                          max_chars=25)
 
 dt_cadas = st.date_input("Data do Cadastro", format="DD/MM/YYYY")
