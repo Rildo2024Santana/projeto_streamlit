@@ -22,7 +22,7 @@ nome = st.text_input("Nome do cliente",
                       max_chars=20)
 
 endereco = st.text_input("Endereço",
-                         key="endereco",
+                         key="input_endereco",
                         max_chars=25)
 
 dt_cadas = st.date_input("Data do Cadastro", format="DD/MM/YYYY")
