@@ -23,7 +23,7 @@ nome = st.text_input("Nome do cliente",
 st.header("st.radio")
 opcao = st.radio("Escolha o Sexo",
                  ["","Masculino","Femenino","Mulher cisgênero","Mulher transgênero","Homem cisgênero","Homem transgênero","Gênero não-binário",
-                  "Agênero","Gênero-fluido","Bigênero","Mulher transexual","Homem transexual","Poligênero","Neutro"]
+                  "Agênero","Gênero-fluido","Bigênero","Mulher transexual","Homem transexual","Poligênero","Neutro"])
 
 end = st.text_input("Endereço",
                          key="input_end",
